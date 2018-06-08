@@ -1,3 +1,4 @@
+#matrixadd
 X = [[1,2,3], [4,5,6],[7,8,9]]
 Y = [[9,8,7],[6,5,4],[3,2,1]]
 
@@ -9,3 +10,72 @@ for i in range(len(X)):
     result[i][j] = X[i][j] + Y[i][j]
 for r in result:
   print(r) 
+  
+#Class way to matrix add
+x = [[1,2,3],[3,4,5],[5,6,7]]
+a = 2
+
+new_x = []     
+#telling python new_x is a list
+for i in range(len(x)):
+#for i in range(3) in this case, list (0,1,2)
+  row_x=[]
+  #row_x is a new list()
+  for j in range(len(x[i])):
+  #for j in range(len(x[0]), len(x[0]) =3
+    row_x.append(2*x[i][j])
+    """
+    #row_x.append(2*[0][0])=2 
+     then for j=1, j=2,....
+    """ 
+  print(row_x)
+  new_x.append(row_x)
+print(new_x)
+
+#vector scalar mult with a function 
+def vector_mult(x,a):
+ """
+ This function takes in a list x with a scalar a, and for each element in x, multiplies the element by a and stores it in a new list b. function returns the list b.
+ """
+  b = []
+  for i in range(len(x)):
+    b.append(x[i] * a)
+  return b
+
+x = [1,2,3]
+a = 2
+print(vector_mult(x,a))
+
+#vector scalar mult
+x = [[1,2,3],[4,5,6,],[7,8,9]]
+y = []
+
+for i in range(len(x)):
+   z = []
+   for j in range(len(x[i])):
+    z.append(2*x[i][j]) 
+   y.append(z)
+print(y)
+
+#vector list
+x = [[1,2,3],[4,5,6]]
+
+for i in range(len(x)):
+  for j in range(len(x[i])):         
+    print(x[i][j])
+    
+ #vector list funciton
+ def vector_list(x):
+  b = []
+  for i in range(len(x)):
+    for j in range(len(x[i])):
+      b.append(x[i][j])
+  
+  return b
+
+x = [[1,2,3],[4,5,6]]
+ans=vector_list(x)
+
+for k in range(len(ans)):
+  print(ans[k])
+#ans[k], calling on each element seperatly each time for loop runs
