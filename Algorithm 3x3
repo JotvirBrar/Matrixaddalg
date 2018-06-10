@@ -79,3 +79,34 @@ ans=vector_list(x)
 for k in range(len(ans)):
   print(ans[k])
 #ans[k], calling on each element seperatly each time for loop runs
+
+
+#matrix vector mult
+
+def multiply(M,V):
+  m = len(M)
+  n = len(V)
+  j = 0
+  l = []
+  while j<m:
+    i = 0
+    while i<n:
+       h = M[j][i]*V[i]
+       l += [h]
+       i += 1
+    j += 1
+  w = 0
+  hh = 0
+  answer = []
+  while w<len(l):
+    w += n
+    s = 0
+    for k in l[hh:w]:
+      s += k
+    hh += n
+    answer += [s]
+  return answer
+
+M = [[1,2], [3,4]]
+V = [1,2]
+print(multiply(M,V))
