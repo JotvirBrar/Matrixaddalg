@@ -40,11 +40,11 @@ def vector_mult(x,a):
   b = []
   for i in range(len(x)):
     b.append(x[i] * a)
+    #takes the vector x and multiplies it with scalar a and adds it to the end of list b which is empty
   return b
+  # scalarVec takes a scalar and a vector and returns the corresponding scalar-vector multiply. 
 
-x = [1,2,3]
-a = 2
-print(vector_mult(x,a))
+
 
 #vector scalar mult
 x = [[1,2,3],[4,5,6,],[7,8,9]]
